@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Container from 'react-bootstrap/Container';
@@ -10,7 +10,14 @@ import Teazer from "../pages/TeazerPage";
 import Dumpling from "../pages/DumplingPage";
 import Home from "../pages/BanhPage";
 
-function BasicExample() {
+function Bar() {
+  const [stores] = useState([
+    { name: 'Banh Mi Bowl', path: '/' },
+    { name: 'Dumpling Cart', path: '/dumpling' },
+    { name: 'Teazer', path: '/teazer' },
+  ]);
+  const [currentStore, setCurrentStore] = useState(stores[0]);
+
   const scrollToSection = (section) => {
     scroller.scrollTo(section, {
       duration: 800,
@@ -19,25 +26,33 @@ function BasicExample() {
     });
   };
 
+  const handleStoreChange = (store) => {
+    setCurrentStore(store);
+  };
+
   return (
     <Router>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="/">Banh Mi Bowl</Navbar.Brand>
+          <Navbar.Brand as={Link} to={currentStore.path}>{currentStore.name}</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">Home</Nav.Link>
-              <Nav.Link as={Link} to="/" onClick={() => scrollToSection('about')}>About</Nav.Link>
+              <Nav.Link as={Link} to={currentStore.path}>Home</Nav.Link>
+              <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('about')}>About</Nav.Link>
               <NavDropdown title="Related Stores" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/dumpling">Dumpling Cart</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/teazer">
-                  Teazer
-                </NavDropdown.Item>
+                {stores.filter(store => store.name !== currentStore.name).map(store => (
+                  <NavDropdown.Item 
+                    key={store.name} 
+                    as={Link} 
+                    to={store.path}
+                    onClick={() => handleStoreChange(store)}
+                  >
+                    {store.name}
+                  </NavDropdown.Item>
+                ))}
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={Link} to="/contact">
-                  Contact
-                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/contact">Contact</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
@@ -53,4 +68,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Bar;
