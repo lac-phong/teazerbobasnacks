@@ -11,6 +11,9 @@ function TeazerPage() {
         <Slideshow page="page1" />
       </Element>
       <Element name="about">
+      <br></br>
+      <br></br>
+      <br></br>
           <About />
       </Element>
     </div>

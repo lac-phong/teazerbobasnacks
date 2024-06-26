@@ -11,6 +11,9 @@ function BanhPage() {
         <Slideshow page="home" />
       </Element>
       <Element name="about">
+        <br></br>
+        <br></br>
+        <br></br>
         <About />
       </Element>
     </div>

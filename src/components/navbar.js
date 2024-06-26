@@ -11,6 +11,7 @@ import Dumpling from "../pages/DumplingPage";
 import Home from "../pages/BanhPage";
 import '../styles/Bar.css'; // Import the CSS file for styling
 
+
 // Import your logo images
 import banhLogo from '../assets/logos/banh_mi_logo.png';
 import dumplingLogo from '../assets/logos/dc_logo.jpg';

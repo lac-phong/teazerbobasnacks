@@ -1,17 +1,47 @@
 /* Bar.css */
 
-.content {
-    margin-top: 70px; /* Adjust the margin-top value to the height of your navbar */
-}
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.navbar-logo {
-    border-radius: 10px; /* Adjust the value for more or less curve */
-}
+/* Ensure the navbar background is slightly transparent */
+.navbar, .navbar.navbar-expand-lg {
+    background-color: rgba(55, 55, 55, 0.8) !important; /* 0.8 is the alpha value, adjust as needed */
+  }
+  
+  /* Ensure the navbar brand, nav links, and dropdown items are white */
+  .navbar .navbar-brand, 
+  .navbar .nav-link, 
+  .navbar .dropdown-item, 
+  .navbar .navbar-nav .nav-link {
+    color: white !important;
+  }
+  
+  /* Change the navbar text color on hover */
+  .navbar .nav-link:hover, 
+  .navbar .dropdown-item:hover {
+    color: lightgray !important;
+  }
+  
+  /* Make the dropdown menu background slightly transparent */
+  .navbar .dropdown-menu {
+    background-color: rgba(57, 57, 57, 0.8) !important; /* 0.8 is the alpha value, adjust as needed */
+  }
+  
+  /* Make the dropdown menu items white */
+  .navbar .dropdown-item {
+    color: white !important;
+  }
+  
+  /* Change the dropdown menu items text color on hover */
+  .navbar .dropdown-item:hover {
+    background-color: darkgray !important; /* Optional: Change the background color on hover */
+    color: rgb(54, 54, 54) !important; /* Optional: Change the text color on hover */
+  }
+  
+  /* Make the toggle button border white */
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Make the toggle icon white */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  

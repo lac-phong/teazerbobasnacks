@@ -11,6 +11,9 @@ function DumplingPage() {
       <Slideshow page="page2" />
       </Element>
       <Element name="about">
+      <br></br>
+      <br></br>
+      <br></br>
           <About />
       </Element>
     </div>
