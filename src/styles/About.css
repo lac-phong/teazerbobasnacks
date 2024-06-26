@@ -1,0 +1,55 @@
+.background-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.fixed-background-banh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.fixed-background-dump {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/dumpbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.fixed-background-teazer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/bobabackground.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #fff;
+    font-weight: 200;
+    background-color: rgba(0, 0, 0, 0.662);
+}
+
+/* Optional: Add styles for readability */
+.content h1,
+.content p {
+    color: #fff;
+}

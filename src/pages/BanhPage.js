@@ -10,8 +10,6 @@ function BanhPage() {
       <Element name="home">
         <Slideshow page="home" />
       </Element>
-      <br></br>
-      <br></br>
       <Element name="about">
         <About />
       </Element>

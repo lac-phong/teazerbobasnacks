@@ -1,8 +1,11 @@
 import React from 'react'
+import "../../styles/About.css"
 
 function Teazer() {
   return (
-    <div className='About'>
+    <div className='background-section'>
+      <div className='fixed-background-teazer'></div> {/* Move this outside .content */}
+      <div className='content'>
         <h1>About Us</h1>
         <p>Welcome to Teazer, your ultimate destination for refreshing and innovative milk tea creations! Nestled in the heart of San Jose, Teazer is a haven for tea enthusiasts and anyone looking to indulge in a delicious and satisfying beverage experience. Our mission is to craft the finest milk teas, blending traditional flavors with a modern twist to delight your taste buds and quench your thirst.
 
@@ -13,8 +16,9 @@ Our commitment to quality doesn't stop at our teas. We strive to create a warm a
 In addition to our signature milk teas, we offer a selection of other refreshing drinks, such as fruit teas, smoothies, and specialty coffees. Each drink is crafted with care and precision to ensure the perfect balance of flavors and textures.
 
 Join us at Teazer and discover why our milk teas are a favorite among locals and visitors alike. We look forward to serving you and sharing our passion for exceptional beverages. Come and experience the magic of Teazer, where every sip is a delight!</p>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Teazer
