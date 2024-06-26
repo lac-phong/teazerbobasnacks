@@ -1,18 +1,17 @@
 import React from 'react';
 import { Element } from 'react-scroll';
-import { BanhMiLogo, BanhMiQR } from '../assets';
 import About from "./subpages/BanhAbout";
 import "../styles/BanhPage.css";
+import Slideshow from "../components/slideshow";
 
 function BanhPage() {
-  const handleClick = (url) => {
-    window.open(url, '_blank');
-  }
-
   return (
     <div className='BanhPage'>
-      <img src={BanhMiLogo} alt="Banh Mi Logo" className="fixed-size" onClick={() => handleClick('https://www.banhmibowlsc.com/')} />
-      <img src={BanhMiQR} alt="Banh Mi QR" className="fixed-size" />
+      <Element name="home">
+        <Slideshow page="home" />
+      </Element>
+      <br></br>
+      <br></br>
       <Element name="about">
         <About />
       </Element>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,13 +9,20 @@ import Contact from "../pages/Contact";
 import Teazer from "../pages/TeazerPage";
 import Dumpling from "../pages/DumplingPage";
 import Home from "../pages/BanhPage";
+import '../styles/Bar.css'; // Import the CSS file for styling
+
+// Import your logo images
+import banhLogo from '../assets/logos/banh_mi_logo.png';
+import dumplingLogo from '../assets/logos/dc_logo.jpg';
+import teazerLogo from '../assets/logos/teazer_logo.jpg';
 
 function Bar() {
   const [stores] = useState([
-    { name: 'Banh Mi Bowl', path: '/' },
-    { name: 'Dumpling Cart', path: '/dumpling' },
-    { name: 'Teazer', path: '/teazer' },
+    { name: 'Banh Mi Bowl', path: '/', logo: banhLogo },
+    { name: 'Dumpling Cart', path: '/dumpling', logo: dumplingLogo },
+    { name: 'Teazer', path: '/teazer', logo: teazerLogo },
   ]);
+
   const [currentStore, setCurrentStore] = useState(stores[0]);
 
   const scrollToSection = (section) => {
@@ -32,13 +39,21 @@ function Bar() {
 
   return (
     <Router>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
         <Container>
-          <Navbar.Brand as={Link} to={currentStore.path}>{currentStore.name}</Navbar.Brand>
+          <Navbar.Brand as={Link} to={currentStore.path}>
+            <img
+              src={currentStore.logo}
+              width="50"
+              height="40"
+              className="d-inline-block align-top"
+              alt={`${currentStore.name} Logo`}
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to={currentStore.path}>Home</Nav.Link>
+              <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('home')}>Home</Nav.Link>
               <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('about')}>About</Nav.Link>
               <NavDropdown title="Related Stores" id="basic-nav-dropdown">
                 {stores.filter(store => store.name !== currentStore.name).map(store => (
@@ -58,12 +73,14 @@ function Bar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/dumpling" element={<Dumpling />} />
-        <Route path="/teazer" element={<Teazer />} />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/dumpling" element={<Dumpling />} />
+          <Route path="/teazer" element={<Teazer />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
