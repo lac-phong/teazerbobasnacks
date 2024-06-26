@@ -1,0 +1,46 @@
+.BanhPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .BanhPage img {
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 600px
+  }
+  
+  .BanhPage img:hover {
+    transform: scale(1.05);
+  }
+  
+  .fixed-size {
+    width: 150px;
+    height: auto;
+  }
+  
+  .about-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .about-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+  }
+  
