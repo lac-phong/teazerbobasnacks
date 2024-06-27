@@ -29,6 +29,7 @@
     top: 30%;
     margin-bottom: 140px;
     background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the caption */
+    font-weight: 400;
   }
   
   .custom-caption h2, .custom-caption p {

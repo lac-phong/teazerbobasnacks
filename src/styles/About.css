@@ -44,8 +44,9 @@
     z-index: 1;
     padding: 20px;
     color: #fff;
-    font-weight: 200;
+    font-weight: 400;
     background-color: rgba(0, 0, 0, 0.662);
+    font-size: 16px;
 }
 
 /* Optional: Add styles for readability */
