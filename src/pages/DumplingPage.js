@@ -3,6 +3,7 @@ import About from "./subpages/DumpAbout";
 import { Element } from 'react-scroll';
 import "../styles/DumpPage.css";
 import Slideshow from "../components/slideshow";
+import Whyus from '../components/Whyus';
 
 function DumplingPage() {
   return (
@@ -15,6 +16,7 @@ function DumplingPage() {
       <br></br>
       <br></br>
           <About />
+          <Whyus page="dumpling" />
       </Element>
     </div>
   )

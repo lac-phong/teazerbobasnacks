@@ -16,3 +16,10 @@
   min-width: 100%;
   height: 100%;
 }
+
+.BanhPage iframe {
+  width: 100%;
+  height: 750px; /* Adjust the height as needed */
+  border: none; /* Remove default border */
+  padding-top: 60px;
+}

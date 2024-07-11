@@ -2,7 +2,7 @@
 
 /* Ensure the navbar background is slightly transparent */
 .navbar, .navbar.navbar-expand-lg {
-    background-color: rgba(0, 0, 0, 0.6) !important; /* 0.8 is the alpha value, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.8) !important; /* 0.8 is the alpha value, adjust as needed */
   }
   
   /* Ensure the navbar brand, nav links, and dropdown items are white */
@@ -21,7 +21,7 @@
   
   /* Make the dropdown menu background slightly transparent */
   .navbar .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.6) !important; /* 0.8 is the alpha value, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.8) !important; /* 0.8 is the alpha value, adjust as needed */
   }
   
   /* Make the dropdown menu items white */

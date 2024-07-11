@@ -34,6 +34,8 @@
   
   .custom-caption h2, .custom-caption p {
     color: white; /* Ensure text color is white */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
   
   .custom-btn {
@@ -50,4 +52,3 @@
     color: white !important;
     text-decoration: none;
   }
-  
