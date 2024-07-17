@@ -3,6 +3,7 @@ import About from "./subpages/TeazerAbout";
 import "../styles/TeazerPage.css";
 import { Element } from 'react-scroll';
 import Slideshow from "../components/slideshow";
+import Whyus from '../components/Whyus';
 
 function TeazerPage() {
   return (
@@ -15,6 +16,7 @@ function TeazerPage() {
       <br></br>
       <br></br>
           <About />
+          <Whyus page="teazer" />
       </Element>
     </div>
   )
