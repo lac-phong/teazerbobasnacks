@@ -53,6 +53,8 @@ function Bar() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('home')}>Home</Nav.Link>
             <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('about')}>About</Nav.Link>
+            <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('whyus')}>Why Us</Nav.Link>
+            <Nav.Link as={Link} to={currentStore.path} onClick={() => scrollToSection('contact')}>Contact</Nav.Link>
             <NavDropdown title="Related Stores" id="basic-nav-dropdown">
               {stores.filter(store => store.name !== currentStore.name).map(store => (
                 <NavDropdown.Item 
@@ -64,8 +66,6 @@ function Bar() {
                   {store.name}
                 </NavDropdown.Item>
               ))}
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/contact">Contact</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
