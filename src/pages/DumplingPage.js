@@ -4,6 +4,8 @@ import { Element } from 'react-scroll';
 import "../styles/DumpPage.css";
 import Slideshow from "../components/slideshow";
 import Whyus from '../components/Whyus';
+import Contact from './Contact';
+
 
 function DumplingPage() {
   return (
@@ -13,7 +15,12 @@ function DumplingPage() {
       </Element>
       <Element name="about">
           <About />
-          <Whyus page="dumpling" />
+      </Element>
+      <Element name="whyus">
+        <Whyus page="dumpling" />
+      </Element>
+      <Element name='contact'>
+        <Contact />
       </Element>
     </div>
   )

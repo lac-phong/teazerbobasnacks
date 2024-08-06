@@ -14,6 +14,8 @@ function BanhPage() {
       </Element>
       <Element name="about">
         <About />
+      </Element>
+      <Element name="whyus">
         <Whyus page="banhmi" />
       </Element>
       <Element name="order">

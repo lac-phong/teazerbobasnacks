@@ -9,44 +9,54 @@ import dumpIMG from "../assets/slideshow/siumai.jpeg";
 function Contact() {
   return (
     <div className='Contact'>
-      <div className='fixed-background-contact'>
+      <div className='contain'>
+        <h1>Contact Information</h1>
         <CardGroup>
-          <Card style={{ width: "20rem" }} className="card-customized">
+          <Card>
             <Card.Img variant="top" src={banhmiIMG} className="card-image" />
             <Card.Body>
-              <Card.Title>Banh Mi &amp; Bowl</Card.Title>
-              <br />
-              <Card.Text>Phone: (408) 326-2299</Card.Text>
-              <Card.Text>Email: banhmibowl.sc@gmail.com</Card.Text>
+              <div className='card-title'>
+                <Card.Title>Banh Mi &amp; Bowl</Card.Title>
+              </div>
+              <div className='card-content'>
+                <Card.Text>Phone: (408) 326-2299</Card.Text>
+                <Card.Text>Email: banhmibowl.sc@gmail.com</Card.Text>
+              </div>
             </Card.Body>
             <Card.Footer>
               <small className="text-muted">4300 Great America Pkwy #172 Santa Clara, CA 95054</small>
             </Card.Footer>
           </Card>
-          <Card className="custom-card">
+          <Card>
             <Card.Img variant="top" src={dumpIMG} className="card-image" />
             <Card.Body>
-              <Card.Title>Dumpling Cart</Card.Title>
-              <br />
-              <Card.Text>Phone: (669) 777-8690</Card.Text>
+              <div className='card-title'>
+                <Card.Title>Dumpling Cart</Card.Title>
+              </div>
+              <div className='card-content'>
+                <Card.Text>Phone: (669) 777-8690</Card.Text>
+              </div>
             </Card.Body>
             <Card.Footer>
               <small className="text-muted">82 E Santa Clara St, San Jose, CA 95113, USA</small>
             </Card.Footer>
           </Card>
-          <Card className="custom-card">
+          <Card>
             <Card.Img variant="top" src={teazerIMG} className="card-image" />
             <Card.Body>
-              <Card.Title>Teazer</Card.Title>
-              <br />
-              <Card.Text>Phone: (669) 777-8690</Card.Text>
+              <div className='card-title'>
+                <Card.Title>Teazer</Card.Title>
+              </div>
+              <div className='card-content'>
+                <Card.Text>Phone: (669) 777-8690</Card.Text>
+              </div>
             </Card.Body>
             <Card.Footer>
               <small className="text-muted">82 E Santa Clara St, San Jose, CA 95113, USA</small>
             </Card.Footer>
           </Card>
         </CardGroup>
-        </div>
+      </div>
     </div>
   );
 }
