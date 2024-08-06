@@ -3,6 +3,7 @@
     width: 100%;
     height: 52vh; /* Adjust height as needed */
     overflow: hidden;
+    margin-top: 75px;
 }
 
 .fixed-background-banh {

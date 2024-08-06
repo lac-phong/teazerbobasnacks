@@ -4,6 +4,7 @@ import About from "./subpages/BanhAbout";
 import "../styles/BanhPage.css";
 import Slideshow from "../components/slideshow";
 import Whyus from '../components/Whyus';
+import Contact from './Contact';
 
 function BanhPage() {
   return (
@@ -12,9 +13,6 @@ function BanhPage() {
         <Slideshow page="home" />
       </Element>
       <Element name="about">
-        <br></br>
-        <br></br>
-        <br></br>
         <About />
         <Whyus page="banhmi" />
       </Element>
@@ -23,6 +21,9 @@ function BanhPage() {
           src="https://www.banhmibowlsc.com/s/order#most-popular" 
           title="Banh Mi Bowl Order Page"
         ></iframe>
+      </Element>
+      <Element name='contact'>
+        <Contact />
       </Element>
     </div>
   )

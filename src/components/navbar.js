@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Contact from "../pages/Contact";
-import Teazer from "../pages/TeazerPage";
-import Dumpling from "../pages/DumplingPage";
-import Home from "../pages/BanhPage";
 import '../styles/Bar.css'; // Import the CSS file for styling
 
 // Import your logo images
@@ -78,20 +74,4 @@ function Bar() {
   );
 }
 
-function App() {
-  return (
-    <Router>
-      <Bar />
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/dumpling" element={<Dumpling />} />
-          <Route path="/teazer" element={<Teazer />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+export default Bar;

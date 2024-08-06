@@ -75,30 +75,38 @@ function Whyus({ page }) {
     <div className='Whyus'>
       <div className='contain'>
       <h1>Why Us</h1>
-      <br></br>
       <CardGroup>
         <Card>
           <Card.Img variant="top" src={card1Content.image} className="card-image" />
           <Card.Body>
-            <Card.Title>{card1Content.title}</Card.Title>
-            <br></br>
-            <Card.Text>{card1Content.description}</Card.Text>
+            <div className='card-title'>
+              <Card.Title>{card1Content.title}</Card.Title>
+            </div>
+            <div className='card-content'>
+              <Card.Text>{card1Content.description}</Card.Text>
+            </div>
           </Card.Body>
         </Card>
         <Card>
           <Card.Img variant="top" src={card2Content.image} className="card-image" />
           <Card.Body>
-            <Card.Title>{card2Content.title}</Card.Title>
-            <br></br>
-            <Card.Text>{card2Content.description}</Card.Text>
+          <div className='card-title'>
+              <Card.Title>{card2Content.title}</Card.Title>
+            </div>
+            <div className='card-content'>
+              <Card.Text>{card2Content.description}</Card.Text>
+            </div>
           </Card.Body>
         </Card>
         <Card>
           <Card.Img variant="top" src={card3Content.image} className="card-image" />
           <Card.Body>
-            <Card.Title>{card3Content.title}</Card.Title>
-            <br></br>
-            <Card.Text>{card3Content.description}</Card.Text>
+          <div className='card-title'>
+              <Card.Title>{card3Content.title}</Card.Title>
+            </div>
+            <div className='card-content'>
+              <Card.Text>{card3Content.description}</Card.Text>
+            </div>
           </Card.Body>
         </Card>
       </CardGroup>

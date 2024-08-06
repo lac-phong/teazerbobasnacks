@@ -1,7 +1,8 @@
 .Whyus {
-    padding-top: 15px;
+    padding-top: 35px;
     background-color: rgba(0, 0, 0, 0.662);
-    padding-bottom: 15px;
+    padding-bottom: 45px;
+    margin-top: 75px;
 }
 
 .contain {
@@ -35,4 +36,13 @@
 .Whyus .card {
     margin: 30px; /* Add some spacing between the cards */
     border-radius: 0;
+}
+
+.card-title {
+    margin-top: 5px;
+}
+
+.card-content {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

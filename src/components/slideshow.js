@@ -113,12 +113,13 @@ function Slide({ page }) {
                 alt={"slide " + hero.id}
               />
               <Carousel.Caption className="custom-caption">
-                <h2>{hero.title}</h2>
-                <p>{hero.description}</p>
-                <br></br>
-                <button className="btn btn-primary custom-btn" onClick={() => handleButtonClick(hero.link)}>
-                  Order Here <i className="fas fa-chevron-right"></i>
-                </button>
+                <div className='carousel-content'>
+                  <h2>{hero.title}</h2>
+                  <p>{hero.description}</p>
+                  <button className="btn btn-primary custom-btn" onClick={() => handleButtonClick(hero.link)}>
+                    Order Here <i className="fas fa-chevron-right"></i>
+                  </button>
+                </div>
               </Carousel.Caption>
             </Carousel.Item>
           ))
