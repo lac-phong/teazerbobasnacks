@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  margin-top: 45px;
+  margin-top: 65px;
 }
 
 .custom-carousel {
@@ -24,9 +24,9 @@ object-fit: cover; /* This will prevent warping and allow parts to be cut off */
 
 .custom-caption {
 position: absolute;
-top: 30%;
+top: 20%;
 margin-top: 70px;
-margin-bottom: 60px;
+margin-bottom: 10%;
 background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background to the caption */
 font-weight: 400;
 }
